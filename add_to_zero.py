@@ -52,7 +52,7 @@ def add_to_zero(nums):
 print(add_to_zero([1, 2, 3, -2]))
 
 
-# Option 2
+# Option 3 (Pyhton Comprehension)
 def add_to_zero(nums):
 
     new_nums = set(nums)
