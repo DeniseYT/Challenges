@@ -34,3 +34,15 @@ def concat_lists(list1, list2):
     return new_list
 
 print(concat_lists([], [1, 2]))
+
+
+# Option 2
+def concat_lists(list1, list2):
+
+    for item in list2:
+        list1.append(item)
+    
+    return list1
+
+print(concat_lists([], [2,3]))
+
