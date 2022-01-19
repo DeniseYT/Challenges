@@ -46,3 +46,16 @@ def has_more_vowels(word):
 print(has_more_vowels("Aal"))
 
 
+# Option 2
+def has_more_vowels(word):
+
+    vowels = {"a", "e", "i", "o", "u"}
+    have_vowel = 0
+
+    for letter in word:
+        if letter.lower() in vowels:
+            have_vowel += 1
+    
+    return have_vowel > len(word) / 2
+
+print(has_more_vowels("Aal"))
