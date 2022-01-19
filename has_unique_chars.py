@@ -40,3 +40,14 @@ def has_unique_chars(word):
 print(has_unique_chars("Monday"))
 
 
+# Option 2
+def has_unique_chars(word):
+
+    new_word = set(word)
+
+    if len(new_word) == len(word):
+        return True
+    else:
+        return False
+
+print(has_unique_chars("Monday"))
