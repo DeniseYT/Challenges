@@ -52,4 +52,16 @@ def add_to_zero(nums):
 print(add_to_zero([1, 2, 3, -2]))
 
 
+# Option 2
+def add_to_zero(nums):
+
+    new_nums = set(nums)
+
+    return any(-num in new_nums for num in nums)
+
+print(add_to_zero([1, 2, 3, -2]))
+
+
+
+
 
