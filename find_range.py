@@ -18,6 +18,7 @@
 
 # Start my solution:
 
+# Option 1
 def find_range(nums):
 
     smallest = min(nums)
@@ -27,3 +28,22 @@ def find_range(nums):
 
 print(find_range([3, 4, 2, 5, 10]))
 
+
+# Option 2 (without using built-in method - min/max)
+def find_range(nums):
+
+    if len(nums) == 0:
+        return (None, None)
+
+    smallest = nums[0]
+    largest = nums[0]
+
+    for num in nums:
+        if num < smallest:
+            smallest = num
+        elif num > largest:
+            largest = num
+    
+    return (smallest, largest)
+
+print(find_range([3, 4, 2, 5, 10]))
