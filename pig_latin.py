@@ -15,7 +15,7 @@
 
 # Start my solution:
 
-# My solution 
+# My solution 1
 def pig_latin(phrase):
 
     new_phrase = phrase.split()
@@ -39,4 +39,16 @@ def pig_latin(phrase):
     
     return pig_latin
             
+print(pig_latin('give me an apple'))
+
+
+# My solution 2
+def pig_latin_word(phrase):
+
+    if word[0] in 'aeiou':
+        return word + 'yay'
+
+    else:
+        return word[1:] + word[0] + 'ay'
+
 print(pig_latin('give me an apple'))
