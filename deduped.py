@@ -1,4 +1,5 @@
-# In this challenge, you’ll write a function that is given a list of items and returns a new list of those items, in the same order, but with duplicate removed.
+# In this challenge, you’ll write a function that is given a list of items and returns a new list of those items, 
+# in the same order, but with duplicate removed.
 
 # For example:
 # >>> deduped([1, 1, 1])
@@ -38,4 +39,20 @@ def deduped(items):
     return new_list
 
 print(deduped([1, 3, 1, 1, 2]))
+
+
+# My solution 2
+# O(n**2) runtime
+def deduped(items):
+
+    new_list = []
+
+    for item in items:
+        if item not in new_list:
+            new_list.append(item)
+    
+    return new_list
+
+print(deduped([1, 3, 1, 1, 2]))
+
 
