@@ -42,3 +42,19 @@ def replace_vowels(chars):
     
 print(replace_vowels(["A", "b"]))
 
+
+# My solution 2
+def replace_vowels(chars):
+
+    vowels = {"a", "e", "i", "o", "u"}
+
+    for i in range(0, len(chars)):
+        if chars[i].lower() in vowels:
+            chars[i] = "*"
+        
+        # else:
+        #     char = char
+    return chars
+    
+print(replace_vowels(["A", "b", "e"]))
+
