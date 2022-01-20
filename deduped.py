@@ -27,5 +27,15 @@
 
 # Start my solution:
 
-# My solution 
+# My solution 1
+def deduped(items):
+
+    new_list = []
+    set_items = set(items)
+    # print(set_items) #{1,2,3} or #{1,3,2}
+
+    new_list += set_items
+    return new_list
+
+print(deduped([1, 3, 1, 1, 2]))
 
