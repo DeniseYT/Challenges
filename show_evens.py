@@ -21,3 +21,17 @@ def show_evens(nums):
     return new_list
 
 print(show_evens([1, 2, 3, 4, 6, 8]))
+
+
+# My solution 2 - use enumerate method
+def show_evens(nums):
+
+    new_list = []
+
+    for i, num in enumerate(nums):
+        if num % 2 == 0:
+            new_list.append(i)
+    
+    return new_list
+            
+print(show_evens([1, 2, 3, 4, 6, 8]))
