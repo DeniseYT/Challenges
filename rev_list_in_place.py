@@ -21,3 +21,15 @@ def rev_list_in_place(lst):
     return lst
         
 print(rev_list_in_place([1, 2, 3]))
+
+
+# My solution 2
+def rev_list_in_place(lst):
+
+    for i in range(len(lst) // 2):
+        lst[i], lst[-i - 1] = lst[-i - 1], lst[i]
+        # x, y = y, x
+
+    return lst
+
+print(rev_list_in_place([1, 2, 3]))
