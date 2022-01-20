@@ -29,6 +29,7 @@
 # Start my solution:
 
 # My solution 1
+# set do not maintain order
 def deduped(items):
 
     new_list = []
@@ -56,3 +57,20 @@ def deduped(items):
 print(deduped([1, 3, 1, 1, 2]))
 
 
+# My solution 3
+# use set to keep track of what we seen, then use a list to hold the results.
+def deduped(items):
+
+    seen = set() #keep track of items we've seen
+    new_list = [] #hold our results
+
+    for item in items:
+        if item not in seen:
+            new_list.append(item)
+            seen.add(item)
+    # print(new_list)
+    # print(seen)
+    
+    return new_list
+
+print(deduped([1, 3, 1, 1, 2]))
