@@ -40,9 +40,12 @@ def word_lengths(sentence):
         # else:
         #     new_dict[len(word)].add(word)
         
-        new_dict[len(word)].add(word) 
+        new_dict[len(word)].add(word) #add to value
         # no matter what, still need to add word
 
     return new_dict
     
 print(word_lengths("cute cats chase fuzzy rats"))
+
+
+
