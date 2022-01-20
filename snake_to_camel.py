@@ -26,3 +26,17 @@ def snake_to_camel(variable_name):
     return new_name[0] + new_string
         
 print(snake_to_camel("hi_balloonicorn_yes")) 
+
+
+# My solution 2
+def snake_to_camel(variable_name):
+
+    new_name = variable_name.split("_")
+
+    for i in range(1, len(new_name)):
+        new_name[i] = new_name[i].capitalize()
+        # print(new_name[i]) #Balloonicorn #Yes
+
+    return "".join(new_name) #convert list to string
+
+print(snake_to_camel("hi_balloonicorn_yes")) 
