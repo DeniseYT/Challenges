@@ -16,7 +16,7 @@
 # Input: [2,3,1,9]
 # Output: 1
 
-# Input: [2,3,1,9,4,5,4] - have issue
+# Input: [2,3,1,9,4,5,4] 
 # Output: 3
 
 # Input: [5,4,3,2,1]
