@@ -24,16 +24,16 @@
 
 
 
-# Solution 1
+# Solution 
 # runtime: O(n), because we go through the list one time in each element.
 
 # Pseudocode:
-# set a variable for the skyscrapers count. we start it from 0.
-# iterate through the list except index[0] and index[-1], because the skyscrapers should have both sides of its neighbors.
+# set a variable for counting the skyscrapers. we start it from 0.
+# iterate through the list except index[0] and index[-1] since the skyscrapers should have both sides of its neighbors.
 # increment by 1 if the condition is met.
 
 def find_skyscrapers(lst):
-    """Find how many skyscrapers in the row of the building"""
+    """Find how many skyscrapers of a row of buildings"""
 
     count = 0
 
@@ -43,31 +43,4 @@ def find_skyscrapers(lst):
     
     return count
 
-print(find_skyscrapers([1,1,1]))
-
-
-
-# Solution 2
-# Show counts and index of the skyscrapers
-
-# Pseudocode:
-# set a variable for the skyscrapers count. we start it from 0.
-# set a variable for the skyscrapers index, using set method in order to check if duplicate. 
-# iterate through the list except index[0] and index[-1], because the skyscrapers should have both sides of its neighbors.
-# if index is not yet in the set.
-# increment by 1 if the condition is met.
-
-def find_skyscrapers(lst):
-
-    count = 0
-    sky_index = set()
-
-    for i in range(1, len(lst)-1):
-        if lst[i] not in sky_index:
-            if lst[i] > lst[i-1] and lst[i] > lst[i+1]:
-                sky_index.add(i)
-                count += 1
-                
-    return f"total {count} skyscrapers, they are index of {sky_index}"
-               
 print(find_skyscrapers([2,3,1,9,4,5,4]))
