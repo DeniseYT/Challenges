@@ -24,7 +24,7 @@
 # Runtime is O(n)
 def two_sum(nums, target):
 
-    new_dict = {}
+    new_dict = {} #{2:0, 5:1, 5:2, 1:3}
 
     for i, value in enumerate(nums): 
         # print(i, value) 
@@ -44,7 +44,7 @@ print(two_sum([2,5,5,1], 10))
 # My solution 2
 def two_sum(nums, target):
 
-    new_dict = {}
+    new_dict = {} #{2:0, 5:1, 5:2, 1:3}
 
     for i in range(len(nums)):
         if nums[i] in new_dict:
