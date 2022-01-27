@@ -18,23 +18,45 @@
 # Input: nums = [3,3], target = 6
 # Output: [0,1]
 
-# My solution 1 - not correct
+
+
+# My solution 1 - Using Hashmap
+# Runtime is O(n)
 def two_sum(nums, target):
 
-    new_list = []
+    new_dict = {}
 
-    for i in range(len(nums)):
-        for j in range(i, len(nums)):
-            if nums[i] + nums[j] == target:
-                # print(nums[i], nums[j])
-                new_list.extend([i,j])
-    
-    return new_list
+    for i, value in enumerate(nums): 
+        # print(i, value) 
+        #0 3
+        #1 2
+        #2 4
+        remaining = target - nums[i]
+        if remaining in new_dict:
+            return [i, new_dict[remaining]]
+        else:
+            new_dict[value] = i
 
-# print(two_sum([3,2,4], 6))
+print(two_sum([3,2,4], 6))
+
 
 
 # My solution 2
+def two_sum(nums, target):
+
+    new_dict = {}
+
+    for i in range(len(nums)):
+        if nums[i] in new_dict:
+            return [new_dict[nums[i]],i]
+        else:
+            new_dict[target-nums[i]] = i
+
+print(two_sum([2,5,5,1], 10))
+
+
+
+# My solution 3
 def two_sum(nums, target):
 
     new_dict = {}
@@ -60,16 +82,14 @@ def two_sum(nums, target):
 print(two_sum([3,2,4], 6))
 
 
-# My solution 3
+
+# My solution 4 - Time limit exceeded 
+# Runtime is O(n*2), the worst case 
 def two_sum(nums, target):
 
-    new_dict = {}
+    for i in range(len(nums)):
+        for j in range(i, len(nums)):
+            if i != j and nums[i] + nums[j] == target:
+                return [i,j]
 
-    for i, num in enumerate(nums):
-        j = target - num
-        if j in new_dict:
-            return new_dict[j], i #1,2
-        else:
-            new_dict[num] = i
-
-# print(two_sum([3,2,4], 6))
+print(two_sum([3,2,4], 6)) #It works fine in this case but not all
