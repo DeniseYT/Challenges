@@ -37,7 +37,7 @@ def two_sum(nums, target):
         else:
             new_dict[value] = i
 
-print(two_sum([3,2,4], 6))
+print(two_sum([2,5,5,1], 10))
 
 
 
