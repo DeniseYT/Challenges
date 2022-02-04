@@ -38,7 +38,7 @@ print(shuffle_array([2,5,1,3,4,7], 3)) #[2,3,5,4,1,7]
 def shuffle_array(nums, n):
 
     new_list = []
-    n = len(nums)//2
+    # n = len(nums)//2
 
     for i in range(n):
         new_list += [nums[i], nums[n]]
