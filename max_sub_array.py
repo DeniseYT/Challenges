@@ -36,6 +36,27 @@ def max_sub_array(nums):
     
     if total == 0:
         return max(nums)
+    
+    return total
 
 print(max_sub_array([-2,1,-3,4,-1,2,1,-5,4])) #-2,-1,-4,0,-1,1,2,-3,1
 # print(max_sub_array([5,4,-1,7,8])) #5,9,8,15,23
+
+
+# My solution 2
+def max_sub_array(nums):
+
+    begin_sum = 0
+    total = sum(nums)
+
+    for num in nums:
+        begin_sum += num
+
+        if begin_sum > total:
+            total = begin_sum
+        elif begin_sum < 0:
+            begin_sum = 0
+    
+    return total
+    
+print(max_sub_array([-2,1,-3,4,-1,2,1,-5,4])) 
