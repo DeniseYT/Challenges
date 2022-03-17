@@ -27,11 +27,16 @@ def longest_common_prefix(strs):
         # ('o', 'o', 'i')
         # ('w', 'w', 'g')
 
+        # ('c', 'c')
+        # ('i', 'a')
+
         if (len(set(a))) == 1:
             new_str += a[0]
+        
         else:
-            break
+            break # means only check one time 
     
     return new_str
 
 print(longest_common_prefix(["flower","flow","flight"])) #fl
+# print(longest_common_prefix(["cir","car"])) #c
