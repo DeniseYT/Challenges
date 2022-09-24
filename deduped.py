@@ -69,7 +69,7 @@ def deduped(items):
             new_list.append(item)
             seen.add(item)
     # print(new_list)
-    # print(seen)
+    # print(seen) #{1,2,3}
     
     return new_list
 

@@ -1,4 +1,6 @@
-# You are given the heights of a row of buildings, from left to right, represented in an array of positive integers. A building is defined as a skyscraper if its height is strictly greater than both its neighbors. Compute and return the number of skyscrapers in this row of buildings.
+# You are given the heights of a row of buildings, from left to right, represented in an array of positive integers. 
+# A building is defined as a skyscraper if its height is strictly greater than both its neighbors. 
+# Compute and return the number of skyscrapers in this row of buildings.
 
 # Assumptions:
 # The input array will be integer based data and no other data types.
